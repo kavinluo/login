@@ -16,7 +16,7 @@
               style="position:relative;height:100%">
         <div class="login-form">
           <div class="login-logo">
-            <img src="../static/image/logo.png"
+            <img src="/static/image/logo.png"
                  alt=""
                  style="height:100px;">
             <div class="logo-text">{{hospitalName}} {{chinaName}} <span
@@ -499,7 +499,7 @@
   }
 
   .loginLeft {
-    background-image: url(../assets/ambuf/images/manageLogo/logoBG.jpg);
+    background-image: url(../assets/ambuf/images/logoBG.jpg);
     background-position: center center;
     background-repeat: repeat-x;
     width: 100%;
@@ -509,7 +509,7 @@
   }
 
   .loginLeft .login {
-    background-image: url(../assets/ambuf/images/manageLogo/transparentBG.png);
+    background-image: url(../assets/ambuf/images/transparentBG.png);
     background-position: center center;
     background-repeat: no-repeat;
     width: 430px;

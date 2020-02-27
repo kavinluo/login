@@ -120,23 +120,6 @@ module.exports = {
     }
     return config;
   },
-  // css: {
-  //   module: false,
-  //   extract: IS_PROD,
-  //   sourceMap: false,
-  //   loaderOptions: {
-  //     scss: {
-  //       // 向全局sass样式传入共享的全局变量, $src可以配置图片cdn前缀
-  //       data: `
-  //       @import "@scss/config.scss";
-  //       @import "@scss/variables.scss";
-  //       @import "@scss/mixins.scss";
-  //       @import "@scss/utils.scss";
-  //       $src: "${process.env.VUE_APP_OSS_SRC}";
-  //       `
-  //     }
-  //   }
-  // },
   transpileDependencies: [],
   lintOnSave: false,
   runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
