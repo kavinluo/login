@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ *
+ *  @description: 基础样式清零、头部、底部
+ *  @author: zyc
+ *  @update: name (2016-08-23)
+ *  Copyright ambuf. All Rights Reserved.
+ *
+html{height:100%;}
+ */
+html{background: #f3f3f4;}
+body{min-height:100%;}
+.marBd14{margin:0 10px;}
+.padBd14{padding:10px;}
+body{margin:0;padding:0;background:#ffffff;line-height: 1.7em;font-family: "微软雅黑";}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,button{padding:0; margin:0;font-family: "微软雅黑";word-wrap:break-word;}
+ul,ol,li{list-style:none;}
+table{text-align:left;}
+p{line-height:18px;}
+hr{border:#000 0 solid;border-top:#c3c3c3 1px solid;height:0;}
+img,fieldset{border:0;}
+a,select,img,input,span,textarea{vertical-align:middle;}
+/* a,span{display:inline-block;} */
+a{text-decoration: none; color: #424242;}
+a:hover{text-decoration: none; color: #005bac;}
+address,em{font-style:normal;}
+.clearit{clear:both;font-size:1px;height:1px;}
+.relative{position:relative;}
+.absolute{position:absolute;}
+.textLeft{text-align:left;}
+.textCenter{text-align:center;}
+.textRight{text-align:right;}
+.tabFixed{table-layout:fixed;}
+.tabAuto{table-layout:auto;}
+.left{float: left;}
+.right{float: right;}
+table{border-collapse:collapse;}
+.c:after{content:"\0020";height:0;display:block;clear:both;}
+.c{zoom:1;}
+.fl{float: left}
+.fr{float: right;}
+dl,dd{margin:0;}
+.minWidth{
+	min-width: 1200px;
+}
+.item-span{
+	padding: 5px;
+}
+.required{
+	line-height: 35px;
+	color: #FF0000;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.text-center{
+	text-align: center;
+}
+
+
+/*兼容bootstrap*/
+.form-control, .select2-search input[type=text]{
+	padding: 0 12px;
+	line-height:1.2;
+}
+[type=reset], [type=submit], button, html [type=button]{-webkit-appearance: none;}
+
+/*elment ui reset*/
+.el-form-item-search .el-form-item{margin-bottom: 10px;}
+.el-tooltip__popper {max-width: 50%;}
+
+/* 树异步加载动画 */
+.el-tree-node__loading-icon.el-icon-loading{position: relative;left: -30px;}
+
+/* 重置时间选项 */
+.el-time-spinner__list {
+  margin-top: -8px
+}
+
+/* 移除数字输入框的上下箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* 移除element对百度编辑器的行高影响 */
+.edui-editor {
+  line-height: initial;
+}
+/* 表单输入框高度统一 */
+.resetFormItemHeight .el-form-item__content{min-height: 38px !important;}
+
+.noMarginBottom {
+  margin-bottom: 0 !important;
+}
+
+.msgTips{text-align: center;line-height: 200px;}
+
+.contentTips{text-align: center;line-height: 300px;}
+
+.eq-qusetionHtmlBox p{line-height: initial;}
+.eq-qusetionHtmlBox p:first-child {line-height: inherit;}
+.eq-qusetionHtmlBox img {max-width: 100%;}
+.eq-qusetionHtmlBox td {padding: 4px;border: 1px solid #666;}
+.eq-qusetionHtmlBox em{font-style: italic;}

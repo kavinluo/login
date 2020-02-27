@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+table{border-collapse:collapse;}
+table.tabList1{border:none;border-top:1px solid #dddddd;border-left:1px solid #dddddd;border-right:1px solid #dddddd;}
+table.tabList1 thead th{line-height:20px;background:#e7eaec;text-align:center;color:#676a6c;font-weight:700;padding:12px 5px;}
+table.tabList2 thead th{background:url(images/tabTitBg2.gif) 0 0 repeat-x;height:26px;border-right:1px solid #dedede;text-align:center;color:#005657;}
+table.tabList3 thead th{line-height:27px;/*background-color:#008fb3;*/background:url(images/tabTitBg3.gif) 0 0 repeat-x;border-right:1px solid #facb86;text-align:center;color:#005657;}
+
+table.tabList1 tbody td,table.tabList2 tbody td,table.tabList3 tbody td{border:none;border-bottom:1px solid #dddddd;line-height:20px;text-align:center;padding:6px 5px;}
+table.tabList1 tbody td td,table.tabList2 tbody td td,table.tabList3 tbody td td{padding:0}
+table.tabList2 tbody td{border-right:1px solid #dedede;}
+/*table.tabList1 tbody td{border:1px solid #e2e2e2;overflow:hidden;text-align:center;}*/
+table.tabList1 tbody td,table.tabList2 tbody td,table.tabList3 tbody td,
+table.tabList1 thead th,table.tabList2 thead th,table.tabList3 thead th
+{
+	overflow: hidden;
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	word-break:keep-all;
+}	
+
+/*---隔行换色---*/
+tr.odd{background-color:#FFFFFF;}
+tr.even{background-color:#f9f9f9;}
+
+/*公共pageBox1*/
+.pageBox1 span.LeftSide{width:52%;padding-left:20px;float:left;}
+.pageBox1 span.RightSide{width:43%;float:right;text-align:right;padding-right:10px;}
+.pageBox1 span.RightSide a,.pageBox3 span.RightSide a{padding-right:10px;}
+
+.pageBox1{height:27px;background:#f1f1f1;line-height:27px;border-bottom:1px solid #cccccc;}
+
+/*特殊pageBox2*/
+.pageBox2{background-color:#d7d7d7;line-height:30px;padding-left:300px;}
+.pageBox2 span{padding-right:200px;padding-left:20px;}
+/*特殊（左靠右，右靠左）*/
+table.tabListx{ }
+table.tabListx tbody td{overflow:hidden;text-align:left;padding:5px;vertical-align: middle;}
+table.tabListx th{border:1px solid #e2e2e2;overflow:hidden;text-align:right;*text-align:right;vertical-align: middle;}
+table.tabNoStyle tbody td{border:none;}
+table.tabList7 tbody td{border-right:1px dotted #bbdcfb;border-bottom: 1px dotted #bbdcfb;}
+table.tabList7 tbody td{padding-left:5px;}
+
+
+table.tabList8 thead th{background-color:#a4cad5;line-height:30px;}
+table.tabList8 tbody td{height:27px;border-right:1px dotted #bbdcfb;text-align:center;}
+
+table.tabList9 tbody td,table.tabList9 tfoot td{border:1px solid #8fc4f8;}
+table.tabList9 tfoot td{background-color:#d9d9d9;text-align:center;height:27px;}
+
+table.tabList10 tbody td,table.tabList10 thead th{border:1px solid #8fc4f8;}
+table.tabList10 thead th,table.tabList10 tbody td{height:27px;text-align:center;}
+
+table.tabList11 thead th{background:#e0ecf9;line-height:30px;text-align:center;}
+table.tabList11 tbody td{height:27px;text-align:center;}
+
+table.claList thead th,table.claList tfoot th{color:#FFFFFF;background-color:#0395ba;height:40px;text-align:center;padding:0 0 0 5px;overflow: hidden;white-space: nowrap;-o-text-overflow: ellipsis;text-overflow: ellipsis;word-break:keep-all;}
+table.claList thead th span,table.claList tfoot th span{width:100%;height:30px;border-right:1px solid #FFFFFF;position:relative;right:-2px;}
+table.claList tbody td{height:30px;border:1px solid #DBDBDB;background-color:#FFFFFF;}
+table.claTotal td{height:25px;border:1px solid #dbdbdb;text-align:center;font-weight:bold;}
+table.nofixed tbody td{padding:5px 0 5px 0;}
+

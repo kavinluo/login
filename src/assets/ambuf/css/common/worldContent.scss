@@ -1,0 +1,59 @@
+.worldContentBox {
+  width: 100%;
+  overflow: auto;
+  background: #f3f3f4;
+  padding: 20px;
+  span,a,b,ul,li,div,tr,td,input,textarea,p,h1 {
+    font-family: '仿宋_GB2312','仿宋';
+  }
+  p{line-height: initial;}
+  table tr,td{border:1px solid #ccc;}
+  table th{height: 0;}
+  input,textarea{outline: none;border: none;font-size: 16px;line-height: initial;max-width: 100%;}
+  textarea{height: 100%;}
+  label{cursor: pointer;}
+  // 查看模式
+  &.view{background: none;padding: 0;}
+  // 输入框
+  .input{width: 100%;}
+  // 一号
+  .yihao{font-size: 34px;}
+  // 小一
+  .xiaoyi{font-size: 32px;}
+  // 二号
+  .erhao{font-size: 29px;}
+  // 小二
+  .xiaoer{font-size: 24px;}
+  // 三号
+  .sanhao{font-size: 21px;}
+  // 小三
+  .xiaosan{font-size: 20px;}
+  // 四号
+  .sihao{font-size: 18px;}
+  // 小四
+  .xiaosi{font-size: 16px;}
+  // 五号
+  .wuhao{font-size: 14px;}
+  // 五号
+  .xiaowu{font-size: 12px;}
+  // 底部边框
+  .borderBottom{border: none;border-bottom: 1px solid #ccc;
+    .el-input__inner{border: none;}
+  }
+  .cell{font-size: 16px;}
+  // 文本居中
+  .textCenter{text-align: center;}
+  // 小输入框
+  .smallInput{width: 60px;}
+  // 日期选择框
+  .el-form-item__content .el-date-editor{width: 100%;}
+  // 基本信息
+  .basicInfo{line-height: 36px;padding-left: 20px}
+}
+
+.worldContentItem {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  &~&{margin-top: 30px;}
+}

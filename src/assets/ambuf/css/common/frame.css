@@ -1,0 +1,1242 @@
+@charset "utf-8";
+
+/* CSS Document */
+/* 解决滚动条出现闪动问题 */
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* =======end========== */
+
+.viewFramework-topbar {
+  background-blend-mode: normal, normal;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 140;
+}
+
+body {
+  background: rgb(220, 233, 244)
+}
+
+.viewFramework-topbar-zindex {
+  z-index: 190;
+}
+
+.boxshadow {
+  box-shadow: 0px 0px 15px 0px rgba(24, 111, 204, 0.15);
+}
+
+.colboxshadow {
+  box-shadow: 0px 0px 15px 0px rgba(24, 111, 204, 0.07);
+}
+
+.viewFramework-body {
+  background-color: rgb(220, 233, 244);
+  bottom: 0;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  z-index: 160;
+}
+
+.viewFramework-body .searchmeau {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #008cf8;
+  box-shadow: 0px 0px 15px 0px rgba(24, 111, 204, 0.07);
+  position: fixed;
+  left: 20px;
+  bottom: 10px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 20
+}
+
+.search-input {
+  position: fixed;
+  width: 170px;
+  height: 30px;
+  left: 20px;
+  bottom: 17px;
+  z-index: 999
+}
+
+.searchitem a {
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+  display: block
+}
+
+.searchitem i {
+  color: #008cf8;
+  font-style: normal
+}
+.searchbox .active {
+  background-color: rgb(214, 237, 255);
+}
+.searchitem a:hover i {
+  color: #008cf8
+}
+
+.searchitem {
+  height: 30px;
+}
+
+.searchitem :hover {
+  background-color: #d6edff;
+  height: 30px;
+  color: #434343;
+}
+
+.foldfont {
+  line-height: 49px;
+}
+
+.viewFramework-body .searchbox {
+  width: 168px;
+  position: fixed;
+  left: 20px;
+  bottom: 47px;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0px 0px 15px 0px rgba(24, 111, 204, 0.07);
+  border-radius: 3px;
+  border: solid 1px #cdd4d9;
+}
+
+.second-nav {
+  width: 200px;
+  /* height:100%; */
+  bottom: 11px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 120;
+  top: 90px;
+  box-shadow: 0px 0px 10px 0px;
+
+}
+
+.viewFramework-sidebar-full .viewFramework-sidebar,
+.viewFramework-sidebar.sidebar-full {
+  display: block;
+  width: 200px;
+  /* margin: 0 10px; */
+  margin-bottom: 0;
+  /* margin-top: 20px; */
+}
+
+.viewFramework-sidebar-mini .viewFramework-sidebar,
+.viewFramework-sidebar.sidebar-mini {
+  display: block;
+  width: 60px;
+  /* margin: 10px;
+  margin-top: 20px; */
+}
+
+.viewFramework-sidebar-mini .viewFramework-sidebar .sidebar-content,
+.viewFramework-sidebar.sidebar-mini .sidebar-content {
+  width: 70px;
+}
+
+.viewFramework-sidebar-mini .sidebar-fold {
+  width: 60px;
+}
+
+.viewFramework-sidebar {
+  bottom: 0;
+  display: none;
+  overflow-x: hidden;
+  position: fixed;
+  top: 110px;
+  width: 0;
+  z-index: 10;
+  left: 10px;
+  transition: all .3s ease-out;
+}
+
+.viewFramework-sidebar .sidebar-content {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 200px;
+  transition: all .2s ease-out;
+}
+
+.viewFramework-sidebar .sidebar-content::-webkit-scrollbar {
+  width: 0;
+}
+
+.sidebar-inner {
+  height: 100%;
+
+}
+
+.sidebar-fold {
+  -moz-user-select: none;
+  background-color: #fff;
+  color: #aeb9c2;
+  cursor: pointer;
+  font-size: 12px;
+  height: 25px;
+  line-height: 25px !important;
+  text-align: center;
+  width: 200px;
+  background-color: #fff;
+  position: fixed;
+  left: 10px;
+  top: 90px;
+  margin-bottom: 5px;
+  z-index: 147;
+  transition: all .3s ease-out;
+}
+
+.viewFramework-sidebar-full .viewFramework-main {
+  z-index: 150;
+  /* overflow: hidden; */
+  overflow: auto;
+  /*background-color: #fff;
+  border-radius: 4px;
+  padding: 12px;*/
+}
+.viewFramework-main .secondPage {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 12px;
+  height: 100%;
+}
+.container.secondPage .treeRight {
+  top:12px;
+  right: 12px;
+  left: 240px;
+}
+
+
+.viewFramework-main-content .crumbstyle {
+  height: 42px;
+  border-bottom: 1px solid #d3e5f4;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-top: 12px;
+
+}
+
+.viewFramework-main-content .crumbstyle .el-breadcrumb .el-breadcrumb__item .el-breadcrumb__item__inner {
+  color: #838991;
+  font-size: 13px;
+  cursor: default;
+}
+
+.viewFramework-main-content .crumbstyle .el-breadcrumb .el-breadcrumb__item .el-breadcrumb__separator {
+  color: #008cf8;
+  cursor: default;
+}
+
+.viewFramework-sidebar-full .viewFramework-main,
+.viewFramework-main-navbar-full .viewFramework-main-content {
+  left: 220px;
+}
+
+.viewFramework-sidebar-mini .viewFramework-main {
+  left: 290px;
+  z-index: 150;
+  overflow-y: auto;
+}
+
+.minleft .viewFramework-main {
+  left: 80px !important;
+}
+.viewFramework-body .viewFramework-main-body{
+  /* min-height: 930px; */
+  overflow-y: auto;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.viewFramework-sidebar-full .viewFramework-main-navbar-mini {
+  min-width: 1040px;
+}
+
+.viewFramework-sidebar-mini .viewFramework-main-navbar-mini {
+  min-width: 1190px;
+}
+
+.viewFramework-main-navbar-mini .viewFramework-main-content {
+  left: 0;
+}
+
+.viewFramework-main,
+.viewFramework-main-content {
+  background: rgb(220, 233, 244);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  transition: all .3s ease-out;
+}
+.viewFramework-main {
+  bottom: 10px;
+  right: 10px;
+}
+.viewFramework-inner {
+  background: #f3f3f4 none repeat scroll 0 0;
+  width: auto;
+  padding-bottom: 1px;
+  zoom: 1;
+}
+
+.viewFramework-main .viewFramework-main-iframe,
+.viewFramework-main-content .viewFramework-main-iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  frameborder: no;
+}
+
+
+/*
+ * 二级菜单
+ */
+.viewFramework-main-navbar-full .viewFramework-main-navbar {
+  width: 180px;
+}
+
+.viewFramework-main-navbar {
+  background-color: #eaedf1;
+  bottom: 0;
+  float: left;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease 0s;
+  width: 0;
+  z-index: 2;
+}
+
+.viewFramework-main-navbar-full .viewFramework-main-navbar-collapse {
+  left: 167px;
+}
+
+.viewFramework-main-navbar-collapse {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transition: all 0.2s ease 0s;
+  width: 13px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.viewFramework-main-navbar .main-nav-stage {
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 180px;
+}
+
+/*
+ * 三级左右结构
+ */
+.viewFramework-main-navbar-full .viewFramework-main-last-navbar {
+  background: #f5f8fa;
+}
+
+.layout-contentfff {
+  background-color: #fff;
+}
+
+.layout-contentdce {
+  background-color: rgb(220, 233, 244);
+  padding: 0 !important;
+  /* margin-top: 10px!important; */
+}
+
+.teachingform .datesstyle {
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #838991;
+  margin-left: 16px;
+}
+
+.teachingform .btn {
+  width: 50px;
+  height: 29px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #cdd4d9;
+  margin-top: -9px;
+}
+
+.teachingform .el-table .cell,
+.teachingform .el-table th>div {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.teachingform .el-table th {
+  background-color: #ddeaf4 !important;
+}
+
+.teachingform .el-table__footer-wrapper thead div,
+.teachingform .el-table__header-wrapper thead div {
+  background-color: #ddeaf4 !important;
+}
+
+.layout-content {
+  min-height: 200px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* margin:0 10px 10px; */
+  padding: 12px;
+  margin-left: 0;
+  /* height: 100%; */
+}
+
+.index-panel-title {
+  font-size: 18px;
+  color: #313131
+}
+
+.homeheight {
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%;
+  /* overflow-x: auto; */
+  padding: 0;
+  /* height:100%; */
+  min-height: 800px;
+  /* overflow-y: auto; */
+  background-color: rgb(220, 233, 244);
+}
+
+.grid-contentmax {
+  border-radius: 4px;
+  /* height: 575px; */
+  height: 553px;
+  padding: 20px;
+}
+.myTable2{
+  height:  465px;
+}
+.bank10 {
+  height: 10px;
+  overflow: hidden;
+  font-size: 0
+}
+.notice .notificationheading {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.notice .noticeall {
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #434343;
+  height: 164px;
+  overflow: hidden;
+
+}
+
+.notice .Inscription {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.notice .notificationcontent {
+  text-indent: 2em;
+  /* height: 36px; */
+  /*white-space: nowrap;*/
+  /* width: 352px; */
+}
+
+.notice .notificationcontent table {
+  width: 100% !important
+}
+
+.notice .noticedate {
+  /*margin-bottom: 20px;*/
+  text-align: center;
+}
+
+.dbtn {
+  text-aligin: right;
+  text-align: right;
+}
+
+.dbtn a {
+  color: #0754aa;
+}
+
+.grid-content {
+  border-radius: 4px;
+  /*height: 300px;*/
+  height: 272px;
+  overflow: hidden;
+  padding: 17px;
+  background-color: #fff;
+
+}
+.work-status{
+  height: 205px;;
+}
+.work-status-in{
+      transform: translate(-50%,-50%);
+      position: relative;
+      left: 50%;
+      top: 50%;
+}
+  .attendancerecord .attendancebase {
+    font-family: MicrosoftYaHei;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .attendancerecord .remind {
+    font-size: 24px;
+    color: #434343;
+  }
+  .attendancerecord .datecut-off {
+    font-size: 14px;
+    color: #008cf8;
+    margin-top: 23px;
+  }
+  .attendancerecord .attendancedetails {
+    font-size: 18px;
+    color: #434343;
+    margin-top: 23px;
+  }
+  .attendancerecord .attendance {
+    font-size: 18px;
+    color: #434343;
+    margin-top: 23px;
+  }
+  .big-gridtable th,.big-gridtable td{
+    width: 55px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #deeaf4;
+    text-align: center;
+  }
+  .gridtable,.big-gridtable {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  .gridtable tr {
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .gridtable tr th,  .gridtable tr td {
+     width: 55px;
+    /*height: 28px;
+    line-height: 28px; */
+    border: 1px solid #deeaf4;
+  }
+  .gridtable .bgcor {
+    background-color: #f8b551;
+  }
+  .gridtable .currentdaystyle {
+    border: 1px solid #fff;
+    background-color: #f8b551;
+    width: 92%;
+    height: 92%;
+    color: #fff;
+  }
+
+  .gridtable div {
+    position: relative;
+    min-width: 34px;
+    min-height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gridtable .check-type {
+    position: absolute;
+    right: -3px;
+    bottom: 5px;
+    height: 10px;
+    display: block;
+    width: 16px;
+    line-height: normal;
+    font-size: 12px;
+    white-space: nowrap;
+    -webkit-transform-origin-x: 0;
+    -webkit-transform: scale(0.6833333333333334);
+    -moz-transform: scale(0.6833333333333334);
+  }
+  .ruleculture {
+    position: relative;
+  }
+  .ruleculture .encouragingwords {
+    width: 16%;
+    height: 109px;
+    background: url(/static/image/qian.png) no-repeat;
+    padding: 20px 9px 0 9px;
+    font-size: 14px;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ruleculture .rightladder {
+    width: 100%;
+    min-width: 455px;
+    height: 185px;
+    /*background: url(/static/image/ti.png) no-repeat 47% bottom;*/
+    /*margin-top: 36px;*/
+    position: relative;
+    /*background-size: 75% 100%*/
+  }
+
+  .ruleculture .icon-qizhi {
+    position: absolute;
+    right: 15%;
+    top: -25px;
+    font-size: 40px
+  }
+  .info-box{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .uwUserInfomation {
+    width: 120px;
+    height: 120px;
+    background-color: #3db5e6;
+    border-radius: 50%;
+    font-family: MicrosoftYaHeiLight;
+    font-size: 64px;
+    color: #ffffff;
+    margin: 0 auto;
+    line-height: 120px;
+  }
+  .uwimgInfomation {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 0 auto 10px;
+    background-size: cover;
+    overflow: hidden;
+    text-align: center;
+    line-height: 120px;
+    background-color: rgb(61, 181, 230);
+  }
+.myFirst{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 110px;
+}
+  .userInfoNames {
+    font-family: MicrosoftYaHei;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #434343;
+     margin-top: 10px;
+  }
+  .userInfoTodoBtns {
+    /* margin-top: 20px; */
+  }
+  .ruleculture .completionrate {
+    color: #434343;
+    font-size: 12px;
+    position: absolute;
+    left: -58px;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .ruleculture .icon-guipeirenwu {
+    font-size: 40px;
+    color: #008cf8;
+    top:0
+  }
+
+  .guipeirenwu {
+    position: absolute;
+  }
+
+.rotaStatus {
+  position: absolute;
+  bottom: 20px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  right: 0
+  }
+
+  .current-state {
+    color: #434343;
+    overflow: hidden;
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+  }
+    .current-state span {
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .department-information {
+     height: 230px
+    }
+    .todecard {
+      height: 30px;
+      margin-bottom: 20px;
+      margin-top: -4px
+    }
+    .el-tabs__nav {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .el-tabs__item {
+      /*padding: 0 20px;*/
+      height: 36px;
+      line-height: 36px;
+      /*font-size: 18px!important;*/
+    }
+    .el-tabs__item.is-active {
+      color: #008cf8;
+      /*border-top: 2px solid #008cf8;*/
+    }
+    .btn {
+      width: 50px;
+      height: 29px;
+      position: absolute;
+      right: 20px;
+      top: 0px;
+      font-family: MicrosoftYaHei;
+      font-size: 13px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #838991;
+      background-color: #ffffff;
+      border-radius: 3px;
+      border: solid 1px #cdd4d9;
+      cursor: pointer;
+      /*margin-top: -9px;*/
+    }
+
+    .todostyle .basecard {
+
+    /* width: 50%; */
+    height: 90px;
+    background-color: #eff3f7;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .todostyle .monthdetails {
+      width: 70%;
+      display: inline-block;
+
+    }
+    .todostyle .handle {
+      font-size: 14px;
+      color: #008cf8;
+
+      cursor: pointer;
+      text-align: right;
+      width: 34px;
+      margin-right: 18px;
+    }
+    .basecard .rotationdetails {
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .basecard .rotationdetails .firstspan {
+      font-size: 14px;
+
+      color: #434343;
+
+    }
+    .basecard .rotationdetails .secondspan {
+      /* font-family: MicrosoftYaHei; */
+      font-size: 12px;
+
+      color: #838991;
+      margin-left: 20px;
+
+    }
+    .basecard .rotationdates {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      font-weight: normal;
+      letter-spacing: 0px;
+      color: #434343;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .todostyle .el-tabs__header {
+      margin-top: -7px;
+    }
+    .panle-wrap-tit{
+      height: 30px;border-bottom: 1px solid #d3e5f4;
+      margin-bottom: 18px
+    }
+    .status-t{
+      color: #434343;text-align: center;margin-bottom: 6px
+    }
+    .departmentechart .departmentbtn {
+
+      background-color: #008cf8;
+      border-radius: 3px;
+      color: #ffffff;
+      border: none;
+      margin-top: 50px;
+      font-size: 14px;
+      min-height: 36px;
+      min-width: 96px;
+    }
+    .departmentechart .fillquickly {
+
+      width: 30%;
+      /*height: 23px;*/
+      background-color: #ffffff;
+      border-radius: 3px;
+      border: solid 1px #cdd4d9;
+      text-align: center;
+      margin-top: 5px;
+      cursor: pointer;
+      min-width: 60px;
+      min-height: 23px;
+    }
+    .teachingactivities .datesstyle {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      color: #838991;
+      margin-left: 14px;
+    }
+    .teachingactivities .activitiescard {
+      /* width: 22.7%; */
+      height:195px;
+      /* margin-right: 3%; */
+      background-color: #eff3f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 4px
+    }
+    .card-text{
+      text-align: center;
+      font-size: 14px;
+      color: #434343
+    }
+
+    .el-radio-button__inner {
+      /*width: 63px;*/
+      height: 34px;
+      /* border: 1px solid #ccc; */
+      /*line-height: 29px;*/
+      /*text-align: center;*/
+      padding: 10px 6px!important;
+    }
+    .cardcss .datesstyle {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      color: #838991;
+      margin-left: 14px;
+      float: left;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+
+    }
+    .cardcss .basecard {
+      width: 50%;
+      height: 90px;
+      background-color: #eff3f7;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .cardcss .peoplenumber {
+      font-family: ArialMT;
+      font-size: 36px;
+      color: #008cf8;
+      padding-right: 18px;
+    }
+    .cardcss .monthdetails {
+      /*height: 100px;*/
+      /* margin: 25px 0 0 5%; */
+      flex: 1;
+      padding-left: 18px;
+
+    }
+    .cardcss .rotationdetails {
+      width: 100%;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 24px;
+      letter-spacing: 0px;
+      color: #535353;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .cardcss .rotationdates {
+      font-family: MicrosoftYaHei-Bold;
+      font-size: 14px;
+      font-weight: normal;
+      letter-spacing: 0px;
+      color: #535353!important;
+    }
+    .departmentsituation .datesstyle {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      color: #838991;
+      margin-left: 14px;
+    }
+    .departmentsituation .nobuttom {
+      margin-bottom: 0!important;
+    }
+    .departmentsituation {
+      width: 100%;
+    }
+    .departmentsituation .basecard {
+      width: 100%;
+      height: 90px;
+      background-color: #eff3f7;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .team-inf{
+      text-align: left;
+      padding-left: 30px;
+      font-size: 14px;
+      color: #434343;
+      flex: 1
+    }
+    .tab-tit{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+    .logo-group{
+      float: right;
+      width: 60px;
+      height: 61px;
+      line-height: 61px;
+      margin-right: 20px;
+      text-align: right;
+      margin-top: -61px;
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #008cf8;
+    }
+   .team-intro{
+     margin: 0 20px 0 0;
+     text-align: center;
+   }
+   .card-in{
+     text-align: center;
+    margin-bottom:16px;
+    font-size: 36px;
+    color: #434343
+
+   }
+    .departmentsituation .basecard .shuzi {
+      font-family: ArialMT;
+      font-size: 36px;
+      color: #434343;
+      margin-top: -14px;
+      margin-right: 3px
+    }
+    .departmentsituation .basecard .keshi {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      letter-spacing: 0px;
+      color: #434343;
+    }
+
+    .classSchedulecard .el-table th {
+      height: 30px;
+    }
+    .classSchedulecard .el-table th:first-child>div {
+      padding: 0!important;
+    }
+    .classSchedulecard .el-table td>div {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+    .classSchedulecard .el-table td {
+      height: 76px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+       overflow: hidden;
+      max-height: 76px;
+    }
+    .classSchedulecard .el-table td:first-child>div {
+      height: 76px;
+      color: #3db5e6;
+      line-height: 76px;
+      text-align: center;
+    }
+    .classSchedulecard .el-table .cell {
+      max-height: 68px;
+    }
+
+    .classSchedulecard .gridtable .fixheight {
+      height: 76px;
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 5px;
+      line-height: 1.8;
+    }
+    /*设置自动高度*/
+    /*.auto-height{*/
+      /*height: 30vh;*/
+      /*min-height: 255px;*/
+    /*}*/
+/*全屏*/
+@media only screen and (min-height:1080px) {
+  .grid-content{
+    height: 320px;
+  }
+  .cardcss .basecard,.departmentsituation .basecard,.todostyle .basecard{
+    height: 115px;
+  }
+  .teachingactivities .activitiescard{
+    height: 238px;
+  }
+  .grid-contentmax {
+    height: 650px;
+  }
+  .myTable2{
+    height: 560px;
+  }
+}
+
+/* 1024 || 1050*/
+@media only screen and (min-height:850px)  and (max-height:930px) {
+
+  .viewFramework-sidebar-mini .viewFramework-main-navbar-mini {
+    min-width: 1160px;
+  }
+  .viewFramework-body .viewFramework-main-body{
+    overflow-y: auto;
+  }
+  .panle-wrap-tit {
+    margin-bottom: 10px;
+}
+.todostyle .basecard{
+  height:90px
+}
+.grid-contentmax{
+  height: 532px;
+  padding: 15px
+}
+  .index-panel-title {
+    font-size: 16px
+  }
+  .ruleculture .rightladder{
+    height:150px
+  }
+  .grid-content {
+    height: 261px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+   .departmentechart .fillquickly {
+    margin-top:-4px;
+   }
+   .el-radio-button__inner{
+     height:30px;
+     padding: 7px 6px!important;
+     font-size: 13px;
+     margin-top: 3px;
+   }
+   .tab-tit{
+    margin-bottom: 20px;
+  }
+
+}
+
+/* 900 */
+@media only screen and (max-height:820px){
+  .viewFramework-body .viewFramework-main-body{
+    overflow-y: auto;
+  }
+
+  .index-panel-title {
+    font-size: 16px;
+  }
+.classSchedulecard{
+  height: 487px ;
+}
+.tableHeight{
+  height: 445px;
+}
+.myTable2{
+  height: 100%;
+}
+  .ruleculture .rightladder {
+    height: 150px;
+  }
+  .todostyle .basecard{
+    height: 90px;
+  }
+
+  .grid-content {
+    padding: 13px;
+    height: 255px
+  }
+  .attendancerecord .remind{
+    font-size: 20px
+  }
+  .department-information{
+    height:210px
+  }
+  .gridtable div{
+    min-width: 30px;
+    min-height: 32px;
+  }
+  .cardcss .basecard,.departmentsituation .basecard{
+    height:88px
+  }
+  .teachingactivities .activitiescard {
+    height:190px;
+
+  }
+  .tab-tit{
+    margin-bottom: 20px;
+  }
+  .panle-wrap-tit{
+    margin-bottom: 10px;
+  }
+  .grid-contentmax{
+    height: 520px;
+    padding: 15px
+  }
+  .classSchedulecard .gridtable .fixheight {
+    height: 68px;
+  }
+  .tab-container{
+    height: 425px;
+  }
+}
+
+/*768*/
+@media only screen and (min-height:200px) and (max-height: 680px) {
+  .viewFramework-body .viewFramework-main-body{
+    overflow: auto;
+  }
+  .notice .noticeall{
+    height: 144px;
+  }
+  .panle-wrap-tit{
+    margin-bottom: 10px;
+  }
+  .tab-tit{
+    margin-bottom: 20px;
+  }
+
+  .index-panel-title {
+    font-size: 14px;
+  }
+
+  .ruleculture .rightladder {
+    height: 185px;
+  }
+  .todostyle .basecard{
+    height: 85px
+  }
+  .grid-content {
+    padding: 15px;
+    height: 255px
+  }
+  .attendancerecord .remind{
+    font-size: 20px
+  }
+  .department-information{
+    height:210px
+  }
+  .cardcss .basecard,.departmentsituation .basecard{
+    height:88px
+  }
+  .teachingactivities .activitiescard {
+    height:185px;
+  }
+  .teachingactivities .activitiescardlast {
+    height: 185px;
+  }
+  .grid-contentmax{
+    height: 520px;
+  }
+  .classSchedulecard .gridtable .fixheight {
+    height: 68px;
+  }
+}
