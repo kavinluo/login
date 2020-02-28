@@ -24,7 +24,7 @@
           </div>
           <div style="width: 60%;border-bottom: 1px dashed  #cdd4d9;    position: relative;">
             <el-form :model="ruleForm"
-                     
+                     :rules="rules"
                      ref="ruleForm"
                      label-width="70px"
                      class="demo-ruleForm noinputleft">
@@ -144,23 +144,23 @@
           reCode:'',
           key:'',
         },
-        // rules: {
-        //   username: [{
-        //     required: true,
-        //     message: '请输入用户名',
-        //     trigger: 'blur'
-        //   }],
-        //   password: [{
-        //     required: true,
-        //     message: '请输入密码',
-        //     trigger: 'blur'
-        //   }],
-        //   reCode: [{
-        //     required: true,
-        //     message: '请输入验证码',
-        //     trigger: 'blur'
-        //   }]
-        // },
+        rules: {
+          username: [{
+            required: true,
+            message: '请输入用户名',
+            trigger: 'blur'
+          }],
+          password: [{
+            required: true,
+            message: '请输入密码',
+            trigger: 'blur'
+          }],
+          reCode: [{
+            required: true,
+            message: '请输入验证码',
+            trigger: 'blur'
+          }]
+        },
         //获取菜单
         getMenusData: {
           ajaxSuccess: 'setMeusData',
