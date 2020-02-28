@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <div class="star">
+ 
+    </div>
+  </div>
+  <style>
+    html, body { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1B2633;
+  background-image: radial-gradient( circle at bottom, white, transparent 70%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-blend-mode: overlay;
+}
+
+.star {
+  height: 1px;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+}
+
+.star:nth-child(10n) {
+  height: 2px;
+  width: 2px;
+}
+
+.star:nth-child(100n) {
+  height: 3px;
+  width: 3px;
+}
+
+.star:nth-child(5000n) {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+}
+  </style>
+
+  <script>
+    function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function generateStars() {
+  var width = $(window).width();
+  var height = $(window).height();
+  $('.star').each(function() {
+    var randomtop = randomNumber(1, height);
+    $(this).css('top', randomtop + 'px');
+    var randomright = randomNumber(1, width);
+    $(this).css('right', randomright + 'px');
+  });
+}
+
+$(window).ready(generateStars);
+
+$(window).resize(generateStars);
+  </script>
+</body>
+</html>

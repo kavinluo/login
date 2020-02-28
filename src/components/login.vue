@@ -219,17 +219,14 @@
       Util = this.$util;
       // let index = '/manage/workbench/work';
       let index = this.$store.getters.getIndexUrl;
-
       if (this.$cookie.get('Token') != null) {
         if (index != '') {
           this.$router.push(index);
         } else {
           this.isLogin = true;
-          console.log(1)
           this.myPromise();
         }
       } else {
-        console.log(2)
         this.getHospitalName();
       }
       this.ruleForm.username = this.$util.getCookie("codeNumber")

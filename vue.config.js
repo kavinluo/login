@@ -4,7 +4,7 @@ const webpack = require("webpack");
 // const PurgecssPlugin = require("purgecss-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
-// const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 // const CompressionWebpackPlugin = require("compression-webpack-plugin");
 // const PrerenderSpaPlugin = require("prerender-spa-plugin");
 // const AliOssPlugin = require("webpack-oss");
@@ -45,35 +45,17 @@ module.exports = {
   configureWebpack: config => {
     console.log('IS_PROD',IS_PROD)
     const plugins = [];
-
+    // if(process.env.NODE_ENV === 'production'){
+    //   
+    // }
     if (IS_PROD) {
-      // 去除多余css
-      // plugins.push(
-      //   new PurgecssPlugin({
-      //     paths: glob.sync([resolve("./**/*.vue")]),
-      //     extractors: [
-      //       {
-      //         extractor: class Extractor {
-      //           static extract(content) {
-      //             const validSection = content.replace(
-      //               /<style([\s\S]*?)<\/style>+/gim,
-      //               ""
-      //             );
-      //             return validSection.match(/[A-Za-z0-9-_:/]+/g) || [];
-      //           }
-      //         },
-      //         extensions: ["html", "vue"]
-      //       }
-      //     ],
-      //     whitelist: ["html", "body"],
-      //     whitelistPatterns: [/el-.*/],
-      //     whitelistPatternsChildren: [/^token/, /^pre/, /^code/]
-      //   })
-      // );
-     
+      // 去掉打包时输出的consol.log()
+      config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+    
+    //   plugins.push(
+    //   
+    // );   
     }
-
-
     config.plugins = [...config.plugins, ...plugins];
   },
   chainWebpack: config => {
@@ -84,8 +66,11 @@ module.exports = {
       .use(
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn$/)
       );
-
-
+       //压缩代码
+      config.optimization.minimize(true);
+      config.optimization.splitChunks({
+        chunks: 'all'
+      })
 
     config.plugin("html").tap(args => {
       // 修复 Lazy loading routes Error
