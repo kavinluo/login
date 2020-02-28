@@ -848,7 +848,7 @@ const getVueObj = function (vue) {
       call(value) {
         let temp;
         let init;
-        let float;
+        //let float;
         if (!value) return '0KB';
         if (value < 1024) {
           return value + 'B';
@@ -873,7 +873,7 @@ const getVueObj = function (vue) {
       call(value) {
         let temp;
         let init;
-        let float;
+        //let float;
         if (!value) return '0KB';
         if (value < 1024) {
           return value + 'kB';
@@ -1129,7 +1129,7 @@ const getVueObj = function (vue) {
     let minute = 1000 * 60;
     let hour = minute * 60;
     let day = hour * 24;
-    let halfamonth = day * 15;
+    //let halfamonth = day * 15;
     let month = day * 30;
 
     let now = new Date().getTime();

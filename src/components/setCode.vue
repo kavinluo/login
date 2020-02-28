@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  let Util;
+  //let Util;
   export default {
     data() {
       return {
@@ -33,7 +33,7 @@
       };
     },
     created() {
-      Util = this.$util;
+      //Util = this.$util;
       this.init();
     },
     methods: {

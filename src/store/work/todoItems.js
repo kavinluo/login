@@ -18,11 +18,11 @@ const mutations = {
 
 const getters = {
   // 总数
-  workHandleTotalCount: (state, getters) => (name = 'handle') => {
+  workHandleTotalCount: (state) => (name = 'handle') => {
     return state[name] && state[name]['totalCount'] || 0
   },
   // 数组
-  workHandleArr: (state, getters) => (name = 'handle') => {
+  workHandleArr: (state) => (name = 'handle') => {
     return state[name] && state[name]['data'] || []
   },
 };

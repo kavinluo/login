@@ -193,7 +193,7 @@ let getters = {
    * @param getters
    * @returns {function(*)}
    */
-  val: (state, getters) => (key) => {
+  val: (state) => (key) => {
     return key ? state[key] : undefined;
   }
 };

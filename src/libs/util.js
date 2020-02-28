@@ -73,7 +73,7 @@ util.pageInitPrams = config.pageInitPrams;
 let queCount = 0;
 const kAppKey = 'AmBuf_product'; //url签名 固定死的
 
-util.queryData = function (options, fun) {
+util.queryData = function (options) {
   //必须基本设置请求参数
   let url = options.url || '';
   let method = options.method || ajaxconfig.method; //"get" "post"  "put" ，默认请求get
@@ -300,9 +300,9 @@ util.handleAjaxError = function ($vue, status, mess) {
 };
 
 //跳转登录页面
-util.gotoLoginPage = function (router) {
-  //location.href= location.hostname+"/index";
-};
+// util.gotoLoginPage = function (router) {
+//   //location.href= location.hostname+"/index";
+// };
 
 //反格式化日期
 util.deformatterDate = function (d) {
@@ -356,7 +356,6 @@ util.serializeParams = function (params, type) {
   } else {
     if (!_.isObject(params)) {
       if (!_.isObject(JSON.parse(params))) {
-        console.log('parmas---',parmas)
         return;
       } else {
         params = JSON.parse(params);
@@ -396,7 +395,7 @@ let info = util.info = function (mes) {
 };
 
 //存取cookie方法
-util.setCookie = function (name, value, days, ckObj) {
+util.setCookie = function (name, value, days) {
     this.$cookie.set(name, value, days);
   },
 
@@ -408,7 +407,7 @@ util.setCookie = function (name, value, days, ckObj) {
     }
   },*/
 
-  util.deleteCookie = function (name, ckObj) {
+  util.deleteCookie = function (name) {
     this.$cookie.delete(name);
   };
 
@@ -438,7 +437,7 @@ util.getCookie = function (name) {
 };
 
 //验证token是否合法
-util.isLegalToken = function (resonse) {
+util.isLegalToken = function () {
   let flag = false;
   if (ajaxconfig['headers']['Token'] != '') {
     flag = true;
@@ -447,7 +446,7 @@ util.isLegalToken = function (resonse) {
 };
 
 //验证是否登录
-util.isLogin = function (ckObj) {
+util.isLogin = function () {
   return util.getCookie('Token');
 };
 
@@ -459,7 +458,7 @@ util.loginOut = function ($vue, goTo = '/login') {
   $vue.$cookie.delete('Token');
 
   let loginOutTitle = {
-    ajaxSuccess: (res) => {
+    ajaxSuccess: () => {
       $vue.successMess('退出成功!');
       $vue.$store.commit('setToken');
       $vue.$router.push(goTo);
@@ -1187,7 +1186,7 @@ export default {
         setObjValEmpty(obj, arr) {
           let isObject = this.valDataType(obj, 'Object');
           if (isObject) {
-            if (!!arr) {
+            if (arr) {
               if (!this.valDataType(obj, 'Array')) return;
               for (var i = 0; i < arr.length; i++) {
                 obj[arr[i]] = '';

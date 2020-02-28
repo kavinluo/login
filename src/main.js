@@ -54,7 +54,7 @@ router.beforeEach((to, from, next) => {
 });
 
 // 这里为了让效果明显一些加了延时
-router.afterEach((to, from) => {
+router.afterEach(() => {
   store.dispatch('onLoading', false);
   iView.LoadingBar.finish();
 });
